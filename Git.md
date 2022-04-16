@@ -31,6 +31,8 @@ git commit -m 'initial project version' // 无-m进编辑器写说明 -a 跳过�
 git remote // 查看远程仓库 -v 显示简写与url
 git remote add <shortname> <url> // 添加一个新远程git仓库
 git fetch <shortname> // 拉取远程仓库有本地无的信息
+
+git push <remote> <branch> 
 ```
 
 ### 克隆现存仓库
