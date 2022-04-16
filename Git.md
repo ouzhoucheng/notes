@@ -20,14 +20,17 @@ git config user.name // 检查一项配置（如user.name
 git help config // 获取命令手册（如config
 ```
 
-### 在已存在目录中初始化仓库
-
+### 一般步骤
 ```C
 cd // 工作文件夹
 git init // 初始化，创建一个.git子目录
 git add *.c // 追踪指定文件
 git add -A // 追踪所有文件
-git commit -m 'initial project version' // 无-m进编辑器写说明 -a 跳过暂存直接提交
+git commit -m 'initial project version' // 无-m进编辑器写说明 -a 跳过暂存直接提交 --amend 重新提交
+
+git remote // 查看远程仓库 -v 显示简写与url
+git remote add <shortname> <url> // 添加一个新远程git仓库
+git fetch <shortname> // 拉取远程仓库有本地无的信息
 ```
 
 ### 克隆现存仓库
@@ -46,6 +49,9 @@ git diff // 显示变化
 echo 'My Project' > README
 rm A.md // 移除文件
 git mv old new // 改名
+git log // 时间先后列出提交 -p 每次提交的差异
+git reset HEAD <file> // 取消暂存
+git checkout -- <file> // 撤销修改，回到上一次提交状态
 ```
 
 [忽略一些文件](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
