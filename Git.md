@@ -28,11 +28,10 @@ git add *.c // 追踪指定文件
 git add -A // 追踪所有文件
 git commit -m 'initial project version' // 无-m进编辑器写说明 -a 跳过暂存直接提交 --amend 重新提交
 
-git remote // 查看远程仓库 -v 显示简写与url
 git remote add <shortname> <url> // 添加一个新远程git仓库
 git fetch <shortname> // 拉取远程仓库有本地无的信息
 
-git push <remote> <branch> 
+git push <remote> <branch> // 提交到远程仓库 -u -f 强行
 ```
 
 ### 克隆现存仓库
@@ -55,6 +54,7 @@ git log // 时间先后列出提交 -p 每次提交的差异
 git reset HEAD <file> // 取消暂存
 git checkout -- <file> // 撤销修改，回到上一次提交状态
 
+git remote // 查看远程仓库 -v 显示简写与url
 git remote rename <OldName> <NewName> // 修改一个远程仓库简写
 git remote remove paul // 移除一个远程仓库
 ```
