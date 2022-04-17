@@ -21,11 +21,11 @@ git fetch <shortname> // 拉取远程仓库有本地无的信息
 git push <remote> <branch> // 提交到远程仓库 -u -f 强行
 ```
 
-### 分支操作
+### 分支与合并
 
 ```C
 git branch testing // 新testing分支
-git checkout testing // 切换到新创建的分支
+git checkout testing // 切换到新创建的分支 git checkout -b testing 简写
 
 ```
 
