@@ -6,6 +6,29 @@
 
 ## 常用命令
 
+### 一般步骤
+
+```C
+cd // 工作文件夹
+git init // 初始化，创建一个.git子目录
+git add *.c // 追踪指定文件
+git add -A // 追踪所有文件
+git commit -m 'initial project version' // 无-m进编辑器写说明 -a 跳过暂存直接提交 --amend 重新提交
+
+git remote add <shortname> <url> // 添加一个新远程git仓库
+git fetch <shortname> // 拉取远程仓库有本地无的信息
+
+git push <remote> <branch> // 提交到远程仓库 -u -f 强行
+```
+
+### 分支操作
+
+```C
+git branch testing // 新testing分支
+git checkout testing // 切换到新创建的分支
+
+```
+
 ### 基本命令
 
 ```C
@@ -20,20 +43,6 @@ git config user.name // 检查一项配置（如user.name
 git help config // 获取命令手册（如config
 ```
 
-### 一般步骤
-```C
-cd // 工作文件夹
-git init // 初始化，创建一个.git子目录
-git add *.c // 追踪指定文件
-git add -A // 追踪所有文件
-git commit -m 'initial project version' // 无-m进编辑器写说明 -a 跳过暂存直接提交 --amend 重新提交
-
-git remote add <shortname> <url> // 添加一个新远程git仓库
-git fetch <shortname> // 拉取远程仓库有本地无的信息
-
-git push <remote> <branch> // 提交到远程仓库 -u -f 强行
-```
-
 ### 克隆现存仓库
 
 ```python
@@ -42,7 +51,7 @@ git clone https://github.com/?/! name # 新的目录名
 
 ```
 
-### 常用命令
+### 其他常用命令
 
 ```C
 git status // 查看文件状态 -s 紧凑输出
@@ -60,7 +69,15 @@ git remote remove paul // 移除一个远程仓库
 
 git tag // 列出标签
 git tag -l "v1.8.5*"// 列出标签
-git tag -a v1.4 -m "my version 1.4"
+git tag -a v1.4 -m "my version 1.4" // 附注标签
+git tag v1.4 // 轻量标签
+// 后期打标签
+git log --pretty=oneline // 列出所有提交校验和
+git tag -a v1.2 9fceb02 // 对应部分校验和
+git push origin v1.5 // 共享标签
+git push origin --tags // 推送所有标签
+git tag -d v1.4-lw // 删除一个标签
+git tag origin --delete <tagname> // 删除远程标签
 
 ```
 
