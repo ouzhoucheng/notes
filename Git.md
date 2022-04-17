@@ -24,9 +24,12 @@ git push <remote> <branch> // 提交到远程仓库 -u -f 强行
 ### 分支与合并
 
 ```C
+git branch // 查看当前分支 --no-merged 查看未合并工作的分支
 git branch testing // 新testing分支
 git checkout testing // 切换到新创建的分支 git checkout -b testing 简写
-
+git merge testing // 将testing合并到当前分支
+git add -- // 冲突已解决
+git branch -d testing // 合并后删除该分支
 ```
 
 ### 基本命令
@@ -78,6 +81,9 @@ git push origin v1.5 // 共享标签
 git push origin --tags // 推送所有标签
 git tag -d v1.4-lw // 删除一个标签
 git tag origin --delete <tagname> // 删除远程标签
+
+git rebase master // 变基
+// https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA
 
 ```
 
