@@ -88,3 +88,14 @@ git rebase master // 变基
 ```
 
 [忽略一些文件](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
+
+## git服务器
+
+[服务器上的git协议](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E5%8D%8F%E8%AE%AE)
+
+- 本地协议：共享文件系统，有服务器则简单，系统难配置，比ssh慢，不够安全
+- (智能)HTTP协议：比ssh简单，某些服务器更麻烦
+- SSH协议：简单，安全，高效，不匿名
+- Git协议：最快，没有授权机制，最难架设
+
+[在服务器上搭建git](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BA-Git)
