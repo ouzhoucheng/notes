@@ -94,7 +94,7 @@ git rebase master // 变基
 - .git隐藏文件夹(文件夹左上角-查看-隐藏的项目)
 - 记事本打开config文件，补充Gitee/Github的仓库地址
 
-```
+```C
 [remote "origin"]
 	url = https://gitee.com/Wind_to_valley/notes.git
 	url = https://github.com/ouzhoucheng/Notes.git
