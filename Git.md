@@ -89,6 +89,17 @@ git rebase master // 变基
 
 [忽略一些文件](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
 
+## 同时提交到gitee和github
+- .git隐藏文件夹(文件夹左上角-查看-隐藏的项目)
+- 记事本打开config文件，补充Gitee/Github的仓库地址
+
+```C
+[remote "origin"]
+	url = https://gitee.com/Wind_to_valley/notes.git
+	url = https://github.com/ouzhoucheng/Notes.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
 ## git服务器
 
 [服务器上的git协议](https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E5%8D%8F%E8%AE%AE)
