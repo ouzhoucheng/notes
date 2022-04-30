@@ -23,7 +23,7 @@ git push <remote> <branch> // 提交到远程仓库 -u -f 强行
 
 ### 分支与合并
 
-```C
+```C++
 git branch // 查看当前分支 --no-merged 查看未合并工作的分支
 git branch testing // 新testing分支
 git checkout testing // 切换到新创建的分支 git checkout -b testing 简写
