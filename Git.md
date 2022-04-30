@@ -91,6 +91,7 @@ git rebase master // 变基
 
 ## 同时提交到gitee和github
 
+- 新建两个空白仓库后
 - .git隐藏文件夹(文件夹左上角-查看-隐藏的项目)
 - 记事本打开config文件，补充Gitee/Github的仓库地址
 
