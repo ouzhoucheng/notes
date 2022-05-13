@@ -35,6 +35,8 @@ Calculate light path
 - $U'+I'=U+I$
 - $\frac{\sin I'}{L'-r}=\frac{\sin U'}{r}$
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/40fb6d908ad94a5ab3073b4d27551435.png)
+
 Paraxial rays
 - $i=\frac{l-r}{r}u$
 - $i'=\frac{n}{n'}i$
@@ -97,7 +99,7 @@ Image characteristics
 
 ## 2.4Magnificaation
 - $\beta=-\frac{f}{x}=-\frac{x'}{f'}$
-- $\alpha=-\frac{x'}{x}=-\frac{f'}{f}\beta$
+- $\alpha=-\frac{x'}{x}=-\frac{f'}{f}\beta^2$
 - $\gamma=\frac{n}{n'}\frac{1}{\beta}$
 - $\alpha\gamma=\beta$
 
@@ -190,7 +192,7 @@ thin lens d->0: $\varPhi=(n-1)(\rho_1-\rho_2)$
   - Entrance pupil: Aperture stop image according to front optical group
   - Exit pupil: Aperture stop image according to behind optical group
   - Square aperture angle of object: Axis object point -- Entrance pupil $\angle$ optical axis
-  - Square aperture angle of image: Axis image point -- Exit pupil $\angle$ iptical axis
+  - Square aperture angle of image: Axis image point -- Exit pupil $\angle$ optical axis
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/1b70d9aebb084b1095d0d795c6c3ca4a.png)
 
