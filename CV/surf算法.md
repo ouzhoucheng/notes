@@ -103,3 +103,7 @@ cv.imwrite("./img/match.png", img_match)
 
 ## 八点算法
 [SVD分解原理](https://zhuanlan.zhihu.com/p/29846048)
+
+## 本质矩阵
+[分解](https://zhuanlan.zhihu.com/p/377794028)
+[计算RT](https://zhuanlan.zhihu.com/p/500798616)
