@@ -26,6 +26,13 @@
 4. 特征点主方向分配
 5. 生成特征点描述子
 6. 特征点匹配
+- `cv2.xfeatures2d.SURF_create(, hessianThreshold, nOctaves, nOctaveLayers, extended, upright)`
+- hessianThreshold：默认100，关键点检测的阈值，越高监测的点越少
+- nOctaves：默认4，金字塔组数
+- nOctaveLayers：默认3，每组金子塔的层数
+- extended：默认False，扩展描述符标志，True表示使用扩展的128个元素描述符，False表示使用64个元素描述符。
+- upright：默认False，垂直向上或旋转的特征标志，True表示不计算特征的方- 向，False-计算方向。
+
 
 ## 运行
 [示例](https://blog.csdn.net/weixin_29041443/article/details/114546648)
@@ -44,11 +51,12 @@ if k & 0xff == 27:
 [opencv4不支持](https://blog.csdn.net/aiden_yan/article/details/108309503)
 
 [Knnmatch匹配](https://juejin.cn/post/6844904071460028424)
+寻找八对最佳匹配
 ```python
 from email.policy import default
 import cv2 as cv
 import matplotlib.pyplot as plt
-surf = cv.xfeatures2d.SURF_create(12000)
+surf = cv.xfeatures2d.SURF_create(11200,4,4,False,False)
 def FindKeypoints(img):
     kp, desc = surf.detectAndCompute(img, None)
     print("points = "+str(len(kp)))
@@ -62,9 +70,36 @@ bf = cv.BFMatcher()
 matches = bf.knnMatch(desc1, desc2,k=2)
 good = []
 for m,n in matches:
-    if m.distance < 0.75*n.distance:
+    if m.distance < 0.6*n.distance:
         good.append([m])
 print(len(good))
-img_match = cv.drawMatchesKnn(img1, kp1, img2, kp2, good, None, flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+good = sorted(good, key=lambda x: x[0].distance)
+for m in good: # 排除掉重复的点对
+    for n in good:
+        if  n!=m and (m[0].trainIdx == n[0].trainIdx):
+            good.remove(n)
+img_match = cv.drawMatchesKnn(img1, kp1, img2, kp2, good[:8], None, flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
 cv.imwrite("./img/match.png", img_match)
 ```
+
+![八对最佳匹配](https://img-blog.csdnimg.cn/a28297e6960142a594f987dea3942244.png)
+
+```python
+Positions = []
+for i in good:
+    Positions.append([kp1[i[0].queryIdx].pt,kp2[i[0].trainIdx].pt])
+for points in Positions: # 随机颜色重新绘图
+    r = random.randint(50, 200)
+    g = random.randint(50, 200)
+    b = random.randint(50, 200)
+    cv.circle(img_match,(int((points[0])[0]),int((points[0])[1])), 10, (r,g,b), -1)
+    cv.circle(img_match,(int((points[1])[0])+4272,int((points[1])[1])), 10, (r,g,b), -1)
+    cv.line(img_match,(int((points[0])[0]),int((points[0])[1])),(int((points[1])[0])+4272,int((points[1])[1])),(r,g,b),5,-1)
+cv.imwrite("./img/match.png", img_match)
+```
+
+![随机颜色重新绘图](https://img-blog.csdnimg.cn/8a61f88e868c4f42bd9b4dc05b5996d8.png)
+
+
+## 八点算法
+[SVD分解原理](https://zhuanlan.zhihu.com/p/29846048)
