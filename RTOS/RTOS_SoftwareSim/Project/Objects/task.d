@@ -1,3 +1,13 @@
 .\objects\task.o: ..\freertos\Source\task.c
+.\objects\task.o: ..\freertos\Source\include\include.h
+.\objects\task.o: ..\freertos\Source\include\FreeRTOS.h
+.\objects\task.o: ..\freertos\Source\include\FreeRTOSConfig.h
+.\objects\task.o: ..\freertos\Source\include\portmacro.h
+.\objects\task.o: D:\Engineer\MDK\SetUp\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\task.o: D:\Engineer\MDK\SetUp\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\task.o: ..\freertos\Source\include\list.h
+.\objects\task.o: ..\freertos\Source\include\list.h
 .\objects\task.o: ..\freertos\Source\include\projdefs.h
+.\objects\task.o: ..\freertos\Source\include\rtdef.h
 .\objects\task.o: ..\freertos\Source\include\task.h
+.\objects\task.o: ..\freertos\portable\RVDS\ARM_CM3\port.h

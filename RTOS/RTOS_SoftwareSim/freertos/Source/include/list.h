@@ -1,5 +1,6 @@
 #include "portmacro.h"
-
+#ifndef LIST_H
+#define LIST_H
 /**
  * @brief 链表节点数据结构定义
  * 
@@ -61,3 +62,4 @@ typedef struct xLIST
 /* 获取链表的最后一个节点 */ 
 #define listGET_END_MARKER( pxList ) ( ( ListItem_t const * ) ( &( ( pxList )->xListEnd ) ) )
 
+#endif

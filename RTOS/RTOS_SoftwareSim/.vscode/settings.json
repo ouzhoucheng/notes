@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "projdefs.h": "c"
+        "projdefs.h": "c",
+        "list.h": "c",
+        "include.h": "c",
+        "freertosconfig.h": "c"
     }
 }

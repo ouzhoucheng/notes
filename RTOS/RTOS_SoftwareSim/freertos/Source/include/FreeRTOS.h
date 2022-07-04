@@ -1,4 +1,7 @@
 #include "FreeRTOSConfig.h"
+#include "portmacro.h"
+#include "list.h"
+
 typedef struct tskTaskControlBlock
 {
     volatile StackType_t *pxTopOfStack; //  栈顶
