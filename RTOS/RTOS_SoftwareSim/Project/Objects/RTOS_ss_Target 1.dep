@@ -1,0 +1,32 @@
+Dependencies for Project 'RTOS_ss', Target 'Target 1': (DO NOT MODIFY !)
+F (..\User\main.c)(0x62C1BA17)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\freertos\Source\include-I.\RTE\_Target_1-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\freertos\Source\include\list.h)(0x62C156B8)
+I (..\freertos\Source\include\portmacro.h)(0x62C1143C)
+I (D:\Code\MDK\SetUp\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (D:\Code\MDK\SetUp\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+I (..\freertos\Source\include\FreeRTOS.h)(0x62C1B682)
+I (..\freertos\Source\include\FreeRTOSConfig.h)(0x62C1B641)
+I (..\freertos\Source\include\task.h)(0x62C1BA5E)
+F (..\freertos\Source\list.c)(0x62C156B9)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\freertos\Source\include-I.\RTE\_Target_1-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
+I (..\freertos\Source\include\list.h)(0x62C156B8)
+I (..\freertos\Source\include\portmacro.h)(0x62C1143C)
+I (D:\Code\MDK\SetUp\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (D:\Code\MDK\SetUp\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
+F (..\freertos\Source\task.c)(0x62C1BAEC)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\freertos\Source\include-I.\RTE\_Target_1-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\task.o --omf_browse .\objects\task.crf --depend .\objects\task.d)
+I (..\freertos\Source\include\projdefs.h)(0x62C1BAF6)
+I (..\freertos\Source\include\task.h)(0x62C1BA5E)
+F (..\Doc\readme.txt)(0x62BC6DE0)()
+F (..\freertos\Source\include\FreeRTOSConfig.h)(0x62C1B641)()
+F (..\freertos\Source\include\list.h)(0x62C156B8)()
+F (..\freertos\Source\include\portmacro.h)(0x62C1143C)()
+F (..\freertos\Source\include\rtdef.h)(0x62C1AB67)()
+F (..\freertos\Source\include\FreeRTOS.h)(0x62C1B682)()
+F (RTE\Device\ARMCM3\startup_ARMCM3.s)(0x50B2CC4C)(--cpu Cortex-M3 --li -g --apcs=interwork -I.\RTE\_Target_1-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1" --pd "ARMCM3 SETA 1"--list .\listings\startup_armcm3.lst --xref -o .\objects\startup_armcm3.o --depend .\objects\startup_armcm3.d)
+F (RTE\Device\ARMCM3\system_ARMCM3.c)(0x55D41F08)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\freertos\Source\include-I.\RTE\_Target_1-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM3-o .\objects\system_armcm3.o --omf_browse .\objects\system_armcm3.crf --depend .\objects\system_armcm3.d)
+I (D:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include\ARMCM3.h)(0x562075B4)
+I (D:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h)(0x5625B70C)
+I (D:\Code\MDK\SetUp\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
+I (D:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (D:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (D:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (D:\Code\MDK\SetUp\ARM\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include\system_ARMCM3.h)(0x55D41F08)
