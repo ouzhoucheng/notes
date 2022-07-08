@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : SDK_S32_PA_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2022-07-04, 16:53, # CodeGen: 14
+**     Date/Time   : 2022-07-08, 13:56, # CodeGen: 26
 **     Abstract    :
 **
 **
@@ -75,6 +75,52 @@
 /*! @brief Array of pin configuration structures */
 pin_settings_config_t g_pin_mux_InitConfigArr[NUM_OF_CONFIGURED_PINS] =
 {
+    {
+        .base              = SIUL2,
+        .pinPortIdx        = 17u,
+        .mux               = PORT_MUX_AS_GPIO,
+        .outputBuffer      = PORT_OUTPUT_BUFFER_DISABLED,
+        .openDrain         = PORT_OPEN_DRAIN_DISABLED,
+        .slewRateCtrlSel   = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
+        .hysteresisSelect  = PORT_HYSTERESYS_ENABLED,
+        .safeMode          = PORT_SAFE_MODE_ENABLED,
+        .analogPadCtrlSel  = PORT_ANALOG_PAD_CONTROL_DISABLED,
+        .inputBuffer       = PORT_INPUT_BUFFER_ENABLED,
+        .pullConfig        = PORT_INTERNAL_PULL_NOT_ENABLED,
+        .invertOutput      = PORT_INVERT_OUTPUT_DISABLED,
+        .gpioBase          = PTB,
+        .intConfig         =
+        {
+            .eirqPinIdx    = 16u,
+            .intEdgeSel    = SIUL2_INT_DISABLE,
+            .intExeSel     = SIUL2_INT_USING_INTERUPT,
+        },
+        .inputMux[0]       = PORT_INPUT_MUX_ALT2,
+        .inputInvert[0]    = PORT_INVERT_INPUT_DISABLED,
+        .inputMuxReg[0]    = 32,
+        .inputMux[1]       = PORT_INPUT_MUX_NO_INIT,
+        .inputMux[2]       = PORT_INPUT_MUX_NO_INIT,
+        .inputMux[3]       = PORT_INPUT_MUX_NO_INIT,
+        .inputMux[4]       = PORT_INPUT_MUX_NO_INIT,
+        .inputMux[5]       = PORT_INPUT_MUX_NO_INIT,
+        .inputMux[6]       = PORT_INPUT_MUX_NO_INIT,
+        .inputMux[7]       = PORT_INPUT_MUX_NO_INIT,
+    },
+    {
+        .base              = SIUL2,
+        .pinPortIdx        = 16u,
+        .mux               = PORT_MUX_ALT1,
+        .outputBuffer      = PORT_OUTPUT_BUFFER_ENABLED,
+        .openDrain         = PORT_OPEN_DRAIN_DISABLED,
+        .slewRateCtrlSel   = HALF_STRENGTH_WITH_SLEWRATE_CONTROL,
+        .hysteresisSelect  = PORT_HYSTERESYS_ENABLED,
+        .safeMode          = PORT_SAFE_MODE_ENABLED,
+        .analogPadCtrlSel  = PORT_ANALOG_PAD_CONTROL_DISABLED,
+        .inputBuffer       = PORT_INPUT_BUFFER_DISABLED,
+        .pullConfig        = PORT_INTERNAL_PULL_NOT_ENABLED,
+        .invertOutput      = PORT_INVERT_OUTPUT_DISABLED,
+        .gpioBase          = PTB,
+    },
     {
         .base              = SIUL2,
         .pinPortIdx        = 45u,

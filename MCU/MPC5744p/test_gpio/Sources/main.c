@@ -56,6 +56,25 @@ void delay(volatile int cycles)
 }
 #define STEP 100
 #define MAX_VAL 1000
+/* Use this define to specify if the application runs as master or slave */
+#define MASTER
+/* #define SLAVE */
+/* Definition of the TX and RX message buffers depending on the bus role */
+#if defined(MASTER)
+    #define TX_MAILBOX  (1UL)
+    #define TX_MSG_ID   (1UL)
+    #define RX_MAILBOX  (0UL)
+    #define RX_MSG_ID   (2UL)
+#elif defined(SLAVE)
+    #define TX_MAILBOX  (0UL)
+    #define TX_MSG_ID   (2UL)
+    #define RX_MAILBOX  (1UL)
+    #define RX_MSG_ID   (1UL)
+#endif
+
+uint8_t CanCount = 0;
+uint8_t SendBuff[8] = {1,2,3,4,5,6,7,8};
+uint8_t ReceiveCount = 0;
 
 void ETIMER0_Ch0_IRQHandler(void)
 {
@@ -65,8 +84,35 @@ void ETIMER0_Ch0_IRQHandler(void)
 	if(--cnt==0)
 	{
 		/* RED LED toggle */
-		PINS_DRV_TogglePins(PTC,(1 << 11));
+		// PINS_DRV_TogglePins(PTC,(1 << 11));
 		cnt=CNT_TIMEOUT;
+    SendBuff[7] = CanCount;
+    can_buff_config_t buffCfg =  {
+            .enableFD = false,
+            .enableBRS = false,
+            .fdPadding = 0U,
+            .idType = CAN_MSG_ID_STD,
+            .isRemote = false
+    };
+    /* Configure TX buffer with index TX_MAILBOX*/
+    CAN_ConfigTxBuff(&can_pal1_instance, TX_MAILBOX, &buffCfg);
+    /* Prepare message to be sent */
+    can_message_t message = {
+        .cs = 0U,
+        .id = 0x300,
+        .data[0] = SendBuff[0],
+        .data[1] = SendBuff[1],
+        .data[2] = SendBuff[2],
+        .data[3] = SendBuff[3],
+        .data[4] = SendBuff[4],
+        .data[5] = SendBuff[5],
+        .data[6] = SendBuff[6],
+        .data[7] = SendBuff[7],
+        .length = 8U
+    };
+    CanCount++;
+    /* Send the information via CAN */
+    CAN_Send(&can_pal1_instance, TX_MAILBOX, &message);
 	}
 	/* need to reset flags */
 	ETIMER_DRV_ClearInterruptStatus(0,ETIMER_CH_IRQ_FLAGS_TOF,0);
@@ -112,30 +158,89 @@ int main(void)
   /* start channel operation */
   ETIMER_DRV_StartTimerChannels(INST_ETIMER0, (ETIMER_ENABLE_CH0));
 
-  PINS_DRV_SetPins(PTC,(1 << 11)|(1 << 12)|(1 << 13));
+  // PINS_DRV_SetPins(PTC,(1 << 11)|(1 << 12)|(1 << 13));
+
+  CAN_Init(&can_pal1_instance, &can_pal1_Config0);
+
+  can_buff_config_t buffCfg =  {
+      .enableFD = false,
+      .enableBRS = false,
+      .fdPadding = 0U,
+      .idType = CAN_MSG_ID_STD,
+      .isRemote = false
+  };
+  CAN_ConfigRxBuff(&can_pal1_instance, RX_MAILBOX, &buffCfg, 0x301);
+
   while(1)
   {
       /* Insert a small delay to make the blinking visible */
-      delay(7200000);
-      /* Toggle output value LED1 */
-      PINS_DRV_TogglePins(PTC, (1<<12));
+      
+      // delay(7200000);
+      // /* Toggle output value LED1 */
+      // PINS_DRV_TogglePins(PTC, (1<<12));
 
-      if (increaseDutyCycle == false)
-	     {
-	         if (dutyCycle < STEP)
-	             increaseDutyCycle = true;
-	         else
-		         dutyCycle -= STEP;
-	     }
-	     else
-	     {
-	         if (dutyCycle > MAX_VAL - STEP)
-	             increaseDutyCycle = false;
-	         else
-		         dutyCycle += STEP;
-	     }
-	     FLEXPWM_DRV_UpdatePulseWidth(INST_FLEXPWM1, 0U, dutyCycle, 0UL, FlexPwmEdgeAligned);
-	     FLEXPWM_DRV_LoadCommands(INST_FLEXPWM1, (1UL << 0));
+      // if (increaseDutyCycle == false)
+	    //  {
+	    //      if (dutyCycle < STEP)
+	    //          increaseDutyCycle = true;
+	    //      else
+		  //        dutyCycle -= STEP;
+	    //  }
+	    //  else
+	    //  {
+	    //      if (dutyCycle > MAX_VAL - STEP)
+	    //          increaseDutyCycle = false;
+	    //      else
+		  //        dutyCycle += STEP;
+	    //  }
+	    //  FLEXPWM_DRV_UpdatePulseWidth(INST_FLEXPWM1, 0U, dutyCycle, 0UL, FlexPwmEdgeAligned);
+	    //  FLEXPWM_DRV_LoadCommands(INST_FLEXPWM1, (1UL << 0));
+
+
+    // delay(7200);
+    // can_message_t recvMsg;
+    // /* Start receiving data in RX_MAILBOX. */
+    // CAN_Receive(&can_pal1_instance, RX_MAILBOX, &recvMsg);
+    // /* Wait until the previous FlexCAN receive is completed */
+    // while(1)
+    // {
+    //   if(CAN_GetTransferStatus(&can_pal1_instance, RX_MAILBOX) != STATUS_BUSY)
+    //   {
+    //     break;
+    //   }
+
+    // }
+    // /* Check the received message ID and payload */
+    // SendBuff[2] = recvMsg.id;
+    // if(recvMsg.id == 0x301)
+    // {
+    //     /* Toggle output value LED1 */
+    //     SendBuff[ReceiveCount] = recvMsg.data[0];
+    //     ReceiveCount++;
+    //     if(ReceiveCount > 7)
+    //     {
+    //       ReceiveCount = 0;
+    //     }
+    // }
+
+
+    /* Define receive buffer */
+        can_message_t recvMsg;
+        /* Start receiving data in RX_MAILBOX. */
+        CAN_Receive(&can_pal1_instance, RX_MAILBOX, &recvMsg);
+        /* Wait until the previous FlexCAN receive is completed */
+        while(CAN_GetTransferStatus(&can_pal1_instance, RX_MAILBOX) == STATUS_BUSY);
+        /* Check the received message ID and payload */
+        if(recvMsg.id == 0x301)
+        {
+            PINS_DRV_TogglePins(PTC,(1 << 13));
+            SendBuff[ReceiveCount] = recvMsg.data[0];
+            ReceiveCount++;
+            if(ReceiveCount > 6)
+            {
+              ReceiveCount = 0;
+            }
+        }
   }
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/

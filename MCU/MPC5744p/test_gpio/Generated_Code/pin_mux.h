@@ -7,7 +7,7 @@
 **     Version     : Component 1.2.0, Driver 1.4, CPU db: 3.00.000
 **     Repository  : SDK_S32_PA_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2022-07-04, 16:53, # CodeGen: 14
+**     Date/Time   : 2022-07-08, 13:24, # CodeGen: 22
 **     Abstract    :
 **
 **     Settings    :
@@ -71,10 +71,10 @@
 **              Peripheral Type CAN                        : 
 **                Custom name                              : CAN_0
 **                CAN_0                                    : 
-**                  FlexCAN Receiver Input                 : <Automatic>
+**                  FlexCAN Receiver Input                 : PB[1]
 **                  CAN_0: FlexCAN Receiver Input          : <Automatic>
 **                  CAN_0: FlexCAN Receiver Input          : <Automatic>
-**                  FlexCAN Transmitter Output             : <Automatic>
+**                  FlexCAN Transmitter Output             : PB[0]
 **                Custom name                              : CAN_1
 **                CAN_1                                    : 
 **                  FlexCAN Receiver Input                 : <Automatic>
@@ -2571,7 +2571,7 @@
 
 
 /*! @brief User number of configured pins */
-#define NUM_OF_CONFIGURED_PINS 3
+#define NUM_OF_CONFIGURED_PINS 5
 
 /*! @brief User configuration structure */
 extern pin_settings_config_t g_pin_mux_InitConfigArr[NUM_OF_CONFIGURED_PINS];

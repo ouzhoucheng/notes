@@ -7,7 +7,7 @@
 **     Version     : Component SDK_S32_PA_15, Driver 01.00, CPU db: 3.00.000
 **     Repository  : SDK_S32_PA_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2022-07-04, 16:53, # CodeGen: 14
+**     Date/Time   : 2022-07-08, 17:22, # CodeGen: 36
 **
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc. 
 **     Copyright 2016-2017 NXP 
@@ -64,6 +64,26 @@ mc_me_peripheral_clock_config_t peripheralClockMcMeConfig0[] = {
         .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
     },
     {
+        .clockName                      = DMAMUX0_CLK,
+        .mc_me_RunPeriphConfig          = MC_ME_PERIPH_CONFIG_1,
+        .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
+    },
+    {
+        .clockName                      = FLEXCAN0_CLK,
+        .mc_me_RunPeriphConfig          = MC_ME_PERIPH_CONFIG_1,
+        .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
+    },
+    {
+        .clockName                      = FLEXCAN1_CLK,
+        .mc_me_RunPeriphConfig          = MC_ME_PERIPH_CONFIG_1,
+        .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
+    },
+    {
+        .clockName                      = FLEXCAN2_CLK,
+        .mc_me_RunPeriphConfig          = MC_ME_PERIPH_CONFIG_1,
+        .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
+    },
+    {
         .clockName                      = MEMU0_CLK,
         .mc_me_RunPeriphConfig          = MC_ME_PERIPH_CONFIG_1,
         .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
@@ -110,6 +130,11 @@ mc_me_peripheral_clock_config_t peripheralClockMcMeConfig0[] = {
     },
     {
         .clockName                      = ETIMER2_CLK,
+        .mc_me_RunPeriphConfig          = MC_ME_PERIPH_CONFIG_1,
+        .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
+    },
+    {
+        .clockName                      = DMAMUX1_CLK,
         .mc_me_RunPeriphConfig          = MC_ME_PERIPH_CONFIG_1,
         .mc_me_LowPowerPeriphConfig     = MC_ME_PERIPH_CONFIG_1,
     },
@@ -395,7 +420,7 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
                 .stop0               = false,
             },
         },
-        .count                    = 12,
+        .count                    = 17,
         .peripherals              = peripheralClockMcMeConfig0,
     },
 
@@ -403,7 +428,7 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
     {
         .sc_dc0              = CGM_CLOCK_DIV_BY_2,
 
-        .ac0_sc              = CGM_ADCx_SOURCE_IRCOSC,
+        .ac0_sc              = CGM_ADCx_SOURCE_PLL0_PHI0,
         .ac0_dc0             = CGM_CLOCK_DIV_BY_16,
         .ac0_dc1             = CGM_CLOCK_DIV_BY_1,
         .ac0_dc2             = CGM_CLOCK_DIV_BY_1,
@@ -413,7 +438,7 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
         .ac1_dc1             = CGM_CLOCK_DIV_BY_1,
 
         .ac2_sc              = CGM_FLEXCANx_SOURCE_PLL0_PHI0,
-        .ac2_dc0             = CGM_CLOCK_DIV_BY_1,
+        .ac2_dc0             = CGM_CLOCK_DIV_BY_1,                   /*!< FLEXCAN divider */
 
         .ac3_sc              = CGM_PLL_REFERENCE_XOSC,
 
@@ -451,7 +476,7 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
         {
             .predivider         = PLLDIG_CLOCK_PREDIV_BY_2,
             .mulFactorDiv       = 20,
-            .phi0Divider        = PLLDIG_PHI_DIV_BY_2,
+            .phi0Divider        = PLLDIG_PHI_DIV_BY_10,
             .phi1Divider        = PLLDIG_PHI_DIV_BY_4,
         },
         .pll1Config =

@@ -14,7 +14,11 @@
       <LinkerFileGenerated>false</LinkerFileGenerated>
       <MakefileGenerated>false</MakefileGenerated>
       <GenSharedModules lines_count="0" />
-      <GenExtraFiles lines_count="0" />
+      <GenExtraFiles lines_count="1">
+        <Line>Generated_Code\can_pal_cfg.h</Line>
+      </GenExtraFiles>
+      <XtraAge0>1424518199</XtraAge0>
+      <GenExtraFileType0>4</GenExtraFileType0>
       <GenLinkedFiles lines_count="0" />
       <SynchronizedStaticFile>
         <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\inc\pins_driver.h</SrcFileName>
@@ -206,6 +210,105 @@
         <NotCreatedByDefault>false</NotCreatedByDefault>
       </SynchronizedStaticFile>
       <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\edma\edma_driver.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\edma\edma_driver.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\edma\edma_hw_access.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\edma\edma_hw_access.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\edma\edma_irq.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\edma\edma_irq.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\edma\edma_hw_access.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\edma\edma_hw_access.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\edma\edma_irq.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\edma\edma_irq.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\inc\edma_driver.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\inc\edma_driver.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\rtos\osif\osif.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\rtos\osif\osif.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\rtos\osif\osif_baremetal.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\rtos\osif\osif_baremetal.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\pal\src\can\can_pal.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\pal\src\can\can_pal.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\pal\inc\can_pal_mapping.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\pal\inc\can_pal_mapping.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\pal\inc\can_pal.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\pal\inc\can_pal.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
         <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\devices\devassert.h</SrcFileName>
         <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
         <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
@@ -349,29 +452,87 @@
         <NoMoreGenerated>false</NoMoreGenerated>
         <NotCreatedByDefault>false</NotCreatedByDefault>
       </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\flexcan\flexcan_hw_access.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\flexcan\flexcan_hw_access.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\flexcan\flexcan_hw_access.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\flexcan\flexcan_hw_access.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\flexcan\flexcan_driver.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\flexcan\flexcan_driver.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\flexcan\flexcan_irq.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\flexcan\flexcan_irq.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\src\flexcan\flexcan_irq.c</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\src\flexcan\flexcan_irq.c</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
+      <SynchronizedStaticFile>
+        <SrcFileName>D:\Engineer\S32DS_Power\SetUp\eclipse\ProcessorExpert\..\..\S32DS\software\S32_SDK_S32PA_RTM_3.0.3\platform\drivers\inc\flexcan_driver.h</SrcFileName>
+        <OrigSrcFileHash>{hash-not-available}</OrigSrcFileHash>
+        <ReviewedSrcFileHash>{hash-not-available}</ReviewedSrcFileHash>
+        <PrjFileName>SDK\platform\drivers\inc\flexcan_driver.h</PrjFileName>
+        <PrjFileHash>{hash-not-available}</PrjFileHash>
+        <NoMoreGenerated>false</NoMoreGenerated>
+        <NotCreatedByDefault>false</NotCreatedByDefault>
+      </SynchronizedStaticFile>
       <GenEventModules lines_count="1">
         <Line>Events</Line>
       </GenEventModules>
       <GenMethodsInEvents lines_count="0" />
-      <GenAllModules lines_count="6">
+      <GenAllModules lines_count="8">
+        <Line>can_pal1</Line>
         <Line>clockMan1</Line>
         <Line>Cpu</Line>
+        <Line>dmaController1</Line>
         <Line>eTimer0</Line>
         <Line>Events</Line>
         <Line>flexPWM1</Line>
         <Line>pin_mux</Line>
       </GenAllModules>
       <GenExternModules lines_count="0" />
-      <GenBeanModules lines_count="4">
+      <GenBeanModules lines_count="6">
         <Line>pin_mux</Line>
         <Line>clockMan1</Line>
         <Line>flexPWM1</Line>
         <Line>eTimer0</Line>
+        <Line>can_pal1</Line>
+        <Line>dmaController1</Line>
       </GenBeanModules>
     </GenFiles>
     <SignalListFile />
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>18</ProjectModificationStamp>
+    <ProjectModificationStamp>30</ProjectModificationStamp>
   </Options>
   <CpuID_1>
     <Generated>true</Generated>
@@ -379,7 +540,7 @@
     <GenComponentVersion>01.197</GenComponentVersion>
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1424262834</HeaderAge>
+    <HeaderAge>1424518199</HeaderAge>
     <CodeAge>1424068316</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>3</GenNumMethods>
@@ -393,23 +554,33 @@
     <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
     <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
     <GenSmartUserChangesDetected_Asembl>false</GenSmartUserChangesDetected_Asembl>
-    <GenExtraFilesCount>16</GenExtraFilesCount>
-    <ExtraFile0>Project_Settings\Startup_Code\core0_intc_sw_handlers.S</ExtraFile0>
-    <ExtraFile1>Project_Settings\Startup_Code\interrupt_vectors.S</ExtraFile1>
-    <ExtraFile2>Project_Settings\Startup_Code\startup_MPC5744P.S</ExtraFile2>
-    <ExtraFile3>Project_Settings\Linker_Files\linker_ram.ld</ExtraFile3>
-    <ExtraFile4>Project_Settings\Linker_Files\linker_flash.ld</ExtraFile4>
-    <ExtraFile5>SDK\platform\devices\MPC5744P\include\MPC5744P.h</ExtraFile5>
-    <ExtraFile6>SDK\platform\devices\MPC5744P\include\MPC5744P_features.h</ExtraFile6>
-    <ExtraFile7>SDK\platform\devices\MPC5744P\startup\system_MPC5744P.c</ExtraFile7>
-    <ExtraFile8>SDK\platform\devices\MPC5744P\startup\system_MPC5744P.h</ExtraFile8>
-    <ExtraFile9>SDK\platform\devices\startup.c</ExtraFile9>
-    <ExtraFile10>SDK\platform\devices\startup.h</ExtraFile10>
-    <ExtraFile11>SDK\platform\devices\common\s32_core_e200.h</ExtraFile11>
-    <ExtraFile12>SDK\platform\devices\callbacks.h</ExtraFile12>
-    <ExtraFile13>SDK\platform\devices\device_registers.h</ExtraFile13>
-    <ExtraFile14>SDK\platform\devices\status.h</ExtraFile14>
-    <ExtraFile15>SDK\platform\devices\devassert.h</ExtraFile15>
+    <GenExtraFilesCount>26</GenExtraFilesCount>
+    <ExtraFile0>SDK\platform\drivers\inc\flexcan_driver.h</ExtraFile0>
+    <ExtraFile1>SDK\platform\drivers\src\flexcan\flexcan_irq.c</ExtraFile1>
+    <ExtraFile2>SDK\platform\drivers\src\flexcan\flexcan_irq.h</ExtraFile2>
+    <ExtraFile3>SDK\platform\drivers\src\flexcan\flexcan_driver.c</ExtraFile3>
+    <ExtraFile4>SDK\platform\drivers\src\flexcan\flexcan_hw_access.h</ExtraFile4>
+    <ExtraFile5>SDK\platform\drivers\src\flexcan\flexcan_hw_access.c</ExtraFile5>
+    <ExtraFile6>Generated_Code\can_pal_cfg.h</ExtraFile6>
+    <ExtraFile7>SDK\platform\pal\inc\can_pal.h</ExtraFile7>
+    <ExtraFile8>SDK\platform\pal\inc\can_pal_mapping.h</ExtraFile8>
+    <ExtraFile9>SDK\platform\pal\src\can\can_pal.c</ExtraFile9>
+    <ExtraFile10>Project_Settings\Startup_Code\core0_intc_sw_handlers.S</ExtraFile10>
+    <ExtraFile11>Project_Settings\Startup_Code\interrupt_vectors.S</ExtraFile11>
+    <ExtraFile12>Project_Settings\Startup_Code\startup_MPC5744P.S</ExtraFile12>
+    <ExtraFile13>Project_Settings\Linker_Files\linker_ram.ld</ExtraFile13>
+    <ExtraFile14>Project_Settings\Linker_Files\linker_flash.ld</ExtraFile14>
+    <ExtraFile15>SDK\platform\devices\MPC5744P\include\MPC5744P.h</ExtraFile15>
+    <ExtraFile16>SDK\platform\devices\MPC5744P\include\MPC5744P_features.h</ExtraFile16>
+    <ExtraFile17>SDK\platform\devices\MPC5744P\startup\system_MPC5744P.c</ExtraFile17>
+    <ExtraFile18>SDK\platform\devices\MPC5744P\startup\system_MPC5744P.h</ExtraFile18>
+    <ExtraFile19>SDK\platform\devices\startup.c</ExtraFile19>
+    <ExtraFile20>SDK\platform\devices\startup.h</ExtraFile20>
+    <ExtraFile21>SDK\platform\devices\common\s32_core_e200.h</ExtraFile21>
+    <ExtraFile22>SDK\platform\devices\callbacks.h</ExtraFile22>
+    <ExtraFile23>SDK\platform\devices\device_registers.h</ExtraFile23>
+    <ExtraFile24>SDK\platform\devices\status.h</ExtraFile24>
+    <ExtraFile25>SDK\platform\devices\devassert.h</ExtraFile25>
   </CpuID_1>
   <ComponentID_2>
     <Generated>true</Generated>
@@ -417,8 +588,8 @@
     <GenComponentVersion>1.2.0</GenComponentVersion>
     <GenDriverVersion>1.4</GenDriverVersion>
     <GenEventModule />
-    <HeaderAge>1424262834</HeaderAge>
-    <CodeAge>1424262834</CodeAge>
+    <HeaderAge>1424517892</HeaderAge>
+    <CodeAge>1424518917</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>17</GenNumMethods>
     <PINS_DRV_Init>true</PINS_DRV_Init>
@@ -457,7 +628,7 @@
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule />
     <HeaderAge>1424068316</HeaderAge>
-    <CodeAge>1424262834</CodeAge>
+    <CodeAge>1424526020</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>2</GenNumMethods>
     <CLOCK_DRV_Init>true</CLOCK_DRV_Init>
@@ -519,7 +690,7 @@
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule />
     <HeaderAge>1424256594</HeaderAge>
-    <CodeAge>1424257027</CodeAge>
+    <CodeAge>1424526020</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>47</GenNumMethods>
     <FLEXPWM_DRV_Deinit>true</FLEXPWM_DRV_Deinit>
@@ -585,7 +756,7 @@
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule />
     <HeaderAge>1424262834</HeaderAge>
-    <CodeAge>1424265392</CodeAge>
+    <CodeAge>1424525794</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>40</GenNumMethods>
     <ETIMER_DRV_Init>true</ETIMER_DRV_Init>
@@ -639,52 +810,181 @@
     <ExtraFile2>SDK\platform\drivers\src\etimer\etimer_hw_access.c</ExtraFile2>
     <ExtraFile3>SDK\platform\drivers\src\etimer\etimer_driver.c</ExtraFile3>
   </ComponentID_6>
+  <ComponentID_14>
+    <Generated>true</Generated>
+    <GenCompName>can_pal1</GenCompName>
+    <GenComponentVersion>SDK_S32_PA_15</GenComponentVersion>
+    <GenDriverVersion>01.00</GenDriverVersion>
+    <GenEventModule />
+    <HeaderAge>1424518199</HeaderAge>
+    <CodeAge>1424519888</CodeAge>
+    <AsemblAge>-1</AsemblAge>
+    <GenNumMethods>16</GenNumMethods>
+    <CAN_Init>true</CAN_Init>
+    <CAN_Deinit>true</CAN_Deinit>
+    <CAN_SetBitrate>true</CAN_SetBitrate>
+    <CAN_GetBitrate>true</CAN_GetBitrate>
+    <CAN_ConfigTxBuff>true</CAN_ConfigTxBuff>
+    <CAN_ConfigRemoteResponseBuff>true</CAN_ConfigRemoteResponseBuff>
+    <CAN_ConfigRxBuff>true</CAN_ConfigRxBuff>
+    <CAN_Send>true</CAN_Send>
+    <CAN_SendBlocking>true</CAN_SendBlocking>
+    <CAN_Receive>true</CAN_Receive>
+    <CAN_ReceiveBlocking>true</CAN_ReceiveBlocking>
+    <CAN_AbortTransfer>true</CAN_AbortTransfer>
+    <CAN_SetRxFilter>true</CAN_SetRxFilter>
+    <CAN_GetTransferStatus>true</CAN_GetTransferStatus>
+    <CAN_InstallEventCallback>true</CAN_InstallEventCallback>
+    <CAN_GetDefaultConfig>true</CAN_GetDefaultConfig>
+    <GenNumEvents>0</GenNumEvents>
+    <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
+    <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
+    <GenSmartUserChangesDetected_Asembl>false</GenSmartUserChangesDetected_Asembl>
+    <GenMethodPos>0</GenMethodPos>
+    <GenExtraFilesCount>3</GenExtraFilesCount>
+    <ExtraFile0>SDK\platform\pal\inc\can_pal.h</ExtraFile0>
+    <ExtraFile1>SDK\platform\pal\inc\can_pal_mapping.h</ExtraFile1>
+    <ExtraFile2>SDK\platform\pal\src\can\can_pal.c</ExtraFile2>
+  </ComponentID_14>
+  <ComponentID_15>
+    <Generated>true</Generated>
+    <GenCompName>dmaController1</GenCompName>
+    <GenComponentVersion>SDK_S32_PA_11</GenComponentVersion>
+    <GenDriverVersion>01.00</GenDriverVersion>
+    <GenEventModule />
+    <HeaderAge>1424518199</HeaderAge>
+    <CodeAge>1424518199</CodeAge>
+    <AsemblAge>-1</AsemblAge>
+    <GenNumMethods>32</GenNumMethods>
+    <EDMA_DRV_Init>true</EDMA_DRV_Init>
+    <EDMA_DRV_Deinit>true</EDMA_DRV_Deinit>
+    <EDMA_DRV_ChannelInit>true</EDMA_DRV_ChannelInit>
+    <EDMA_DRV_ReleaseChannel>true</EDMA_DRV_ReleaseChannel>
+    <EDMA_DRV_StartChannel>true</EDMA_DRV_StartChannel>
+    <EDMA_DRV_StopChannel>true</EDMA_DRV_StopChannel>
+    <EDMA_DRV_InstallCallback>true</EDMA_DRV_InstallCallback>
+    <EDMA_DRV_GetChannelStatus>true</EDMA_DRV_GetChannelStatus>
+    <EDMA_DRV_PushConfigToReg>true</EDMA_DRV_PushConfigToReg>
+    <EDMA_DRV_PushConfigToSTCD>true</EDMA_DRV_PushConfigToSTCD>
+    <EDMA_DRV_ConfigSingleBlockTransfer>true</EDMA_DRV_ConfigSingleBlockTransfer>
+    <EDMA_DRV_ConfigLoopTransfer>true</EDMA_DRV_ConfigLoopTransfer>
+    <EDMA_DRV_ConfigScatterGatherTransfer>true</EDMA_DRV_ConfigScatterGatherTransfer>
+    <EDMA_DRV_ConfigMultiBlockTransfer>true</EDMA_DRV_ConfigMultiBlockTransfer>
+    <EDMA_DRV_CancelTransfer>true</EDMA_DRV_CancelTransfer>
+    <EDMA_DRV_SetChannelRequestAndTrigger>true</EDMA_DRV_SetChannelRequestAndTrigger>
+    <EDMA_DRV_ClearTCD>true</EDMA_DRV_ClearTCD>
+    <EDMA_DRV_SetSrcAddr>true</EDMA_DRV_SetSrcAddr>
+    <EDMA_DRV_SetSrcOffset>true</EDMA_DRV_SetSrcOffset>
+    <EDMA_DRV_SetSrcReadChunkSize>true</EDMA_DRV_SetSrcReadChunkSize>
+    <EDMA_DRV_SetDestAddr>true</EDMA_DRV_SetDestAddr>
+    <EDMA_DRV_SetDestOffset>true</EDMA_DRV_SetDestOffset>
+    <EDMA_DRV_SetDestWriteChunkSize>true</EDMA_DRV_SetDestWriteChunkSize>
+    <EDMA_DRV_SetMinorLoopBlockSize>true</EDMA_DRV_SetMinorLoopBlockSize>
+    <EDMA_DRV_SetMajorLoopIterationCount>true</EDMA_DRV_SetMajorLoopIterationCount>
+    <EDMA_DRV_GetRemainingMajorIterationsCount>true</EDMA_DRV_GetRemainingMajorIterationsCount>
+    <EDMA_DRV_SetScatterGatherLink>true</EDMA_DRV_SetScatterGatherLink>
+    <EDMA_DRV_DisableRequestsOnTransferComplete>true</EDMA_DRV_DisableRequestsOnTransferComplete>
+    <EDMA_DRV_SetSrcLastAddrAdjustment>true</EDMA_DRV_SetSrcLastAddrAdjustment>
+    <EDMA_DRV_SetDestLastAddrAdjustment>true</EDMA_DRV_SetDestLastAddrAdjustment>
+    <EDMA_DRV_ConfigureInterrupt>true</EDMA_DRV_ConfigureInterrupt>
+    <EDMA_DRV_TriggerSwRequest>true</EDMA_DRV_TriggerSwRequest>
+    <GenNumEvents>0</GenNumEvents>
+    <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
+    <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
+    <GenSmartUserChangesDetected_Asembl>false</GenSmartUserChangesDetected_Asembl>
+    <GenMethodPos>0</GenMethodPos>
+    <GenExtraFilesCount>6</GenExtraFilesCount>
+    <ExtraFile0>SDK\platform\drivers\inc\edma_driver.h</ExtraFile0>
+    <ExtraFile1>SDK\platform\drivers\src\edma\edma_irq.h</ExtraFile1>
+    <ExtraFile2>SDK\platform\drivers\src\edma\edma_hw_access.h</ExtraFile2>
+    <ExtraFile3>SDK\platform\drivers\src\edma\edma_irq.c</ExtraFile3>
+    <ExtraFile4>SDK\platform\drivers\src\edma\edma_hw_access.c</ExtraFile4>
+    <ExtraFile5>SDK\platform\drivers\src\edma\edma_driver.c</ExtraFile5>
+  </ComponentID_15>
+  <ComponentID_17>
+    <Generated>true</Generated>
+    <GenCompName>osif1</GenCompName>
+    <GenComponentVersion>SDK_S32_PA_11</GenComponentVersion>
+    <GenDriverVersion>01.00</GenDriverVersion>
+    <GenEventModule />
+    <HeaderAge>-1</HeaderAge>
+    <CodeAge>-1</CodeAge>
+    <AsemblAge>-1</AsemblAge>
+    <GenNumMethods>10</GenNumMethods>
+    <OSIF_TimeDelay>true</OSIF_TimeDelay>
+    <OSIF_MutexLock>true</OSIF_MutexLock>
+    <OSIF_MutexUnlock>true</OSIF_MutexUnlock>
+    <OSIF_MutexCreate>true</OSIF_MutexCreate>
+    <OSIF_MutexDestroy>true</OSIF_MutexDestroy>
+    <OSIF_SemaWait>true</OSIF_SemaWait>
+    <OSIF_SemaPost>true</OSIF_SemaPost>
+    <OSIF_SemaCreate>true</OSIF_SemaCreate>
+    <OSIF_SemaDestroy>true</OSIF_SemaDestroy>
+    <OSIF_GetMilliseconds>true</OSIF_GetMilliseconds>
+    <GenNumEvents>0</GenNumEvents>
+    <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
+    <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
+    <GenSmartUserChangesDetected_Asembl>false</GenSmartUserChangesDetected_Asembl>
+    <GenMethodPos>0</GenMethodPos>
+    <GenExtraFilesCount>2</GenExtraFilesCount>
+    <ExtraFile0>SDK\rtos\osif\osif_baremetal.c</ExtraFile0>
+    <ExtraFile1>SDK\rtos\osif\osif.h</ExtraFile1>
+  </ComponentID_17>
   <UsedSrcFiles>
-    <SrcFile0>Drivers\flexpwm.src=-1</SrcFile0>
-    <SrcFile1>Drivers\C55\StaticSdk_C55.drv=1360689981</SrcFile1>
-    <SrcFile2>Drivers\interrupt_manager.src=-1</SrcFile2>
-    <SrcFile3>Drivers\C55\S32_SDK_C55\flexpwm.drv=-1</SrcFile3>
-    <SrcFile4>Drivers\C55\StaticSdk_C55_V4.drv=1360689981</SrcFile4>
-    <SrcFile5>Drivers\Common\Header.h=1360689981</SrcFile5>
-    <SrcFile6>Drivers\C55\HAL_Port_Bridge_V2.prg=1360689981</SrcFile6>
-    <SrcFile7>Beans\_SDK\SdkOptions.chg=1360689829</SrcFile7>
-    <SrcFile8>Drivers\sw\RTOSAdaptor\Common_RTOSAdaptor.prg=1423870784</SrcFile8>
-    <SrcFile9>Drivers\Common\EBGNSupport\StringLib.prg=1360689981</SrcFile9>
-    <SrcFile10>Drivers\Common\Header.c=1360689981</SrcFile10>
-    <SrcFile11>Drivers\sw\RTOSAdaptor\Default_RTOSAdaptor.prg=1423870784</SrcFile11>
-    <SrcFile12>Drivers\etimer.src=-1</SrcFile12>
-    <SrcFile13>Drivers\PEx_C55.src=1360689981</SrcFile13>
-    <SrcFile14>Drivers\Common\HeaderFreescale.C=1360689981</SrcFile14>
-    <SrcFile15>Drivers\C55\C55_Repository\etimer_code.drv=-1</SrcFile15>
-    <SrcFile16>Drivers\Common\RTOSAdaptor.prg=1360689981</SrcFile16>
-    <SrcFile17>Drivers\Common\WriteBlock_NotRst.prg=1360689981</SrcFile17>
-    <SrcFile18>Drivers\C55\S32_SDK_C55\interrupt_manager.drv=-1</SrcFile18>
-    <SrcFile19>Drivers\sw\PinSettings.drv=-1</SrcFile19>
-    <SrcFile20>Drivers\Common\Header.doxy=1423870784</SrcFile20>
-    <SrcFile21>Drivers\Common\GenInitConfigSequence.prg=1360689981</SrcFile21>
-    <SrcFile22>Drivers\Common\C55Abstract.inc=1360689981</SrcFile22>
-    <SrcFile23>Drivers\C55\S32_SDK_C55\flexpwm_code.drv=-1</SrcFile23>
-    <SrcFile24>Drivers\Common\C55Settings.inc=1360689981</SrcFile24>
-    <SrcFile25>Drivers\Common\InitRegBlock.prg=1360689981</SrcFile25>
-    <SrcFile26>Drivers\PinSettings.src=-1</SrcFile26>
-    <SrcFile27>Drivers\Common\PinSettingsAbstract.inc=-1</SrcFile27>
-    <SrcFile28>Drivers\Common\CoreInfo.inc=1360689981</SrcFile28>
-    <SrcFile29>Drivers\Common\InitReg32Block.prg=1360689981</SrcFile29>
-    <SrcFile30>Drivers\C55\C55_Repository\HAL_Port_Bridge.prg=1360689981</SrcFile30>
-    <SrcFile31>Drivers\Common\Static_SupportSubroutines.prg=1360689981</SrcFile31>
-    <SrcFile32>Drivers\Common\ToolChain_Settings.prg=1360689981</SrcFile32>
-    <SrcFile33>Drivers\C55\S32_SDK_C55\clock_manager.drv=-1</SrcFile33>
-    <SrcFile34>Drivers\C55\C55_Repository\StaticSdk_C55.prg=1360689981</SrcFile34>
-    <SrcFile35>Drivers\C55\PinSettings_MPC5744P_257.prg=-1</SrcFile35>
-    <SrcFile36>Drivers\C55\C55_Repository\etimer.drv=-1</SrcFile36>
-    <SrcFile37>Drivers\Common\HeaderCopyright.inc=1360689981</SrcFile37>
-    <SrcFile38>Drivers\C55\S32_SDK_C55\clock_manager_code.drv=-1</SrcFile38>
-    <SrcFile39>Drivers\GlobalConfigFiles.drv=1360689981</SrcFile39>
-    <SrcFile40>Drivers\Common\HeaderFreescale.h=1360689981</SrcFile40>
-    <SrcFile41>Drivers\Common\Header.end=1360689981</SrcFile41>
-    <SrcFile42>Drivers\clock_manager.src=-1</SrcFile42>
-    <SrcFile43>Drivers\Common\EBGNSupport\TimingLib.prg=1360689981</SrcFile43>
-    <SrcFile44>Drivers\Common\InitReg16Block.prg=1360689981</SrcFile44>
+    <SrcFile0>Drivers\C55\StaticSdk_C55.drv=1360689981</SrcFile0>
+    <SrcFile1>Drivers\interrupt_manager.src=-1</SrcFile1>
+    <SrcFile2>Drivers\osifcommon\osif.drv=-1</SrcFile2>
+    <SrcFile3>Beans\can_pal\Drivers\S32K\S32_SDK\can_pal_global_cfg.drv=1360689828</SrcFile3>
+    <SrcFile4>Drivers\C55\S32_SDK_C55\flexpwm.drv=-1</SrcFile4>
+    <SrcFile5>Drivers\C55\StaticSdk_C55_V4.drv=1360689981</SrcFile5>
+    <SrcFile6>Beans\_SDK\SdkOptions.chg=1360689829</SrcFile6>
+    <SrcFile7>Drivers\Common\EBGNSupport\StringLib.prg=1360689981</SrcFile7>
+    <SrcFile8>Drivers\etimer.src=-1</SrcFile8>
+    <SrcFile9>Drivers\PEx_C55.src=1360689981</SrcFile9>
+    <SrcFile10>Drivers\Common\HeaderFreescale.C=1360689981</SrcFile10>
+    <SrcFile11>Drivers\C55\C55_Repository\etimer_code.drv=-1</SrcFile11>
+    <SrcFile12>Drivers\Common\RTOSAdaptor.prg=1360689981</SrcFile12>
+    <SrcFile13>Drivers\C55\S32_SDK_C55\interrupt_manager.drv=-1</SrcFile13>
+    <SrcFile14>Drivers\sw\PinSettings.drv=-1</SrcFile14>
+    <SrcFile15>Drivers\Common\Header.doxy=1423870784</SrcFile15>
+    <SrcFile16>Drivers\Common\GenInitConfigSequence.prg=1360689981</SrcFile16>
+    <SrcFile17>Drivers\Common\C55Abstract.inc=1360689981</SrcFile17>
+    <SrcFile18>Drivers\C55\S32_SDK_C55\flexpwm_code.drv=-1</SrcFile18>
+    <SrcFile19>Drivers\Common\C55Settings.inc=1360689981</SrcFile19>
+    <SrcFile20>Drivers\S32_SDK_DMA_32CH\edma_code.drv=-1</SrcFile20>
+    <SrcFile21>Drivers\PinSettings.src=-1</SrcFile21>
+    <SrcFile22>Drivers\Common\PinSettingsAbstract.inc=-1</SrcFile22>
+    <SrcFile23>Drivers\Common\CoreInfo.inc=1360689981</SrcFile23>
+    <SrcFile24>Drivers\Common\InitReg32Block.prg=1360689981</SrcFile24>
+    <SrcFile25>Drivers\C55\C55_Repository\HAL_Port_Bridge.prg=1360689981</SrcFile25>
+    <SrcFile26>Drivers\S32K\S32_SDK\can_pal.drv=-1</SrcFile26>
+    <SrcFile27>Drivers\Common\ToolChain_Settings.prg=1360689981</SrcFile27>
+    <SrcFile28>Drivers\C55\S32_SDK_C55\clock_manager.drv=-1</SrcFile28>
+    <SrcFile29>Drivers\C55\C55_Repository\StaticSdk_C55.prg=1360689981</SrcFile29>
+    <SrcFile30>Drivers\C55\C55_Repository\etimer.drv=-1</SrcFile30>
+    <SrcFile31>Drivers\C55\S32_SDK_C55\clock_manager_code.drv=-1</SrcFile31>
+    <SrcFile32>Drivers\Common\HeaderFreescale.h=1360689981</SrcFile32>
+    <SrcFile33>Drivers\Common\EBGNSupport\TimingLib.prg=1360689981</SrcFile33>
+    <SrcFile34>Drivers\flexpwm.src=-1</SrcFile34>
+    <SrcFile35>Drivers\Common\Header.h=1360689981</SrcFile35>
+    <SrcFile36>Drivers\C55\HAL_Port_Bridge_V2.prg=1360689981</SrcFile36>
+    <SrcFile37>Drivers\sw\RTOSAdaptor\Common_RTOSAdaptor.prg=1423870784</SrcFile37>
+    <SrcFile38>Drivers\Common\Header.c=1360689981</SrcFile38>
+    <SrcFile39>Drivers\osif.src=-1</SrcFile39>
+    <SrcFile40>Drivers\sw\RTOSAdaptor\Default_RTOSAdaptor.prg=1423870784</SrcFile40>
+    <SrcFile41>Drivers\Common\WriteBlock_NotRst.prg=1360689981</SrcFile41>
+    <SrcFile42>Drivers\can_pal.src=-1</SrcFile42>
+    <SrcFile43>Drivers\Common\InitRegBlock.prg=1360689981</SrcFile43>
+    <SrcFile44>Drivers\S32K\S32_SDK\can_pal_code.drv=-1</SrcFile44>
+    <SrcFile45>Drivers\Common\Static_SupportSubroutines.prg=1360689981</SrcFile45>
+    <SrcFile46>Drivers\edma.src=-1</SrcFile46>
+    <SrcFile47>Drivers\C55\PinSettings_MPC5744P_257.prg=-1</SrcFile47>
+    <SrcFile48>Drivers\S32_SDK_DMA_32CH\edma.drv=-1</SrcFile48>
+    <SrcFile49>Drivers\Common\HeaderCopyright.inc=1360689981</SrcFile49>
+    <SrcFile50>Drivers\GlobalConfigFiles.drv=1360689981</SrcFile50>
+    <SrcFile51>Drivers\Common\Header.end=1360689981</SrcFile51>
+    <SrcFile52>Drivers\clock_manager.src=-1</SrcFile52>
+    <SrcFile53>Drivers\Common\InitReg16Block.prg=1360689981</SrcFile53>
   </UsedSrcFiles>
 </GenerationInfo_G_C>
 

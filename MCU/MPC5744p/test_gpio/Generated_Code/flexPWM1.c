@@ -7,7 +7,7 @@
 **     Version     : Component S32_SDK_C55, Driver 01.00, CPU db: 3.00.000
 **     Repository  : SDK_S32_PA_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2022-07-04, 14:00, # CodeGen: 13
+**     Date/Time   : 2022-07-08, 17:22, # CodeGen: 36
 **
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc. 
 **     Copyright 2016-2017 NXP 
@@ -61,7 +61,7 @@ const flexpwm_input_capture_config_t flexPWM1_flexpwm_input_capture_config_t0 = 
 flexpwm_module_setup_t flexPWM1_flexpwm_module_setup_t0 = {
   .cntrInitSel = InitSrcLocalSync,
   .clkSrc = ClkSrcPwmPeriphClk,
-  .clockFreq = 1000000U,
+  .clockFreq = 2500000U,
   .prescaler = PwmDividedBy1,
   .chnlPairOper = FlexPwmComplementary,
   .complementarySourceSel = FlexPwmComplementarySource23,

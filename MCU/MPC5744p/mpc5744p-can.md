@@ -33,3 +33,81 @@
    2. 静默模式: 只能向总线发送隐性位, 监测总线数据
    3. 回环模式: 输出->输入 & 总线, 不能接收总线, 用于自检
    4. 回环静默模式: 自我检查, 不干扰总线
+
+# 配置
+1. 在`component library`中双击添加`can pal`模块
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/96fd6906220d4114a0bc35f921ceab31.png)
+2. 再在`components`中双击这个模块，进入配置界面，完成配置
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/6bb1c5d8f8734a1da44d4ce28b66321d.png)
+3. `ctrl+s`保存， 生成代码
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/340082fcf6c944f1bd18002fe94d7b1e.png)
+4. 添加发送邮箱和接受邮箱、报文id
+    ```C++
+    #define TX_MAILBOX  (1UL)
+    #define TX_MSG_ID   (0x300)
+    #define RX_MAILBOX  (0UL)
+    #define RX_MSG_ID   (0x301)
+    ```
+5. 可以[开启定时器中断](https://blog.csdn.net/weixin_46143152/article/details/125605983), 中断发送, 也可以在while延时循环发送
+    ```C++
+    CAN_Init(&can_pal1_instance, &can_pal1_Config0);    //  初始化 
+    ```
+
+    ```C++
+    uint8_t CanCount = 0;   // can计数
+    uint8_t SendBuff[8] = {1,2,3,4,5,6,7,8};    //  发送内容
+    uint8_t ReceiveCount = 0;   //  接收计数, 可忽略
+
+    /*** 发送 ***/
+    SendBuff[7] = CanCount; //  末位自加1
+    can_buff_config_t buffCfg =  {
+            .enableFD = false,
+            .enableBRS = false,
+            .fdPadding = 0U,
+            .idType = CAN_MSG_ID_STD,
+            .isRemote = false
+    };
+    /* Configure TX buffer with index TX_MAILBOX*/
+    CAN_ConfigTxBuff(&can_pal1_instance, TX_MAILBOX, &buffCfg);
+    /* Prepare message to be sent */
+    can_message_t message = {
+        .cs = 0U,
+        .id = 0x300,    //  发送id, 即TX_MSG_ID
+        .data[0] = SendBuff[0],
+        .data[1] = SendBuff[1],
+        .data[2] = SendBuff[2],
+        .data[3] = SendBuff[3],
+        .data[4] = SendBuff[4],
+        .data[5] = SendBuff[5],
+        .data[6] = SendBuff[6],
+        .data[7] = SendBuff[7],
+        .length = 8U    //  发送数据长度
+    };
+    CanCount++; //  末位自加1, 可不加
+    /* Send the information via CAN */
+    CAN_Send(&can_pal1_instance, TX_MAILBOX, &message); //  发送
+    ```
+
+6. 在`while`中循环接收
+    ```C++
+    while(1)
+    {
+        can_message_t recvMsg;
+        /* Start receiving data in RX_MAILBOX. */
+        CAN_Receive(&can_pal1_instance, RX_MAILBOX, &recvMsg);
+        /* Wait until the previous FlexCAN receive is completed */
+        while(CAN_GetTransferStatus(&can_pal1_instance, RX_MAILBOX) == STATUS_BUSY);
+        /* Check the received message ID and payload */
+        if(recvMsg.id == 0x301)
+        {
+            PINS_DRV_TogglePins(PTC,(1 << 13));
+            SendBuff[ReceiveCount] = recvMsg.data[0];
+            ReceiveCount++;
+            if(ReceiveCount > 6)
+            {
+                ReceiveCount = 0;
+            }
+        }
+    }
+    ```
+7. 编译, debug
