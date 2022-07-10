@@ -141,3 +141,92 @@ Task1_Handle = xTaskCreateStatic( (TaskFunction_t)Task1_Entry,   /* 任务入口
 - RTOS的延时: 阻塞延时
 - 空闲任务: 启动调度器时创建的优先级最低的任务
 - 阻塞延时: 调用时任务被剥离cpu使用权, 进入阻塞状态, 可去执行其他任务(若也阻塞, 运行空闲任务)
+
+`FreeRTOSConfig.h`决定`SysTick`的中断周期
+```C++
+#define configCPU_CLOCK_HZ			( ( unsigned long ) 25000000 )	
+#define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
+
+vTaskDelay( 1 );
+```
+
+# 多优先级
+- 就绪列表`pxReadyTasksLists[configMAX_PRIORITIES]`数组存储就绪任务的TCB(的xStateListItem节点), 数组下标越小, 任务优先级越低
+- 创建任务时根据任务优先级将任务插入到就绪列表不同位置, 同优先级插入同一条链表
+- `pxCurrenTCB`: 全局TCB指针, 任务切换时指向优先级最高的就绪任务TCB
+- `taskSELECT_HIGHEST_PRIORITY_TASK`
+
+```C++
+taskSELECT_HIGHEST_PRIORITY_TASK() // 寻找优先级最高的就绪任务 (更新`uxTopReadyPriority`和`pxCurrentTCB`的值)
+taskRESET_READY_PRIORITY( uxPriority )  //  将变量uxTopReadyPriority某个位清0
+// 实现任务延时列表后, 任务非就绪时, 清零uxTopReadyPriority对应位, 将任务从就绪列表删除
+```
+
+# 延时列表
+- 任务需要延时时,将任务挂起, 从就绪列表删除, 插入延时列表, 更新下一个任务解锁时刻变量`xNextTaskUnblockTime`
+- `xNextTaskUnblockTime` = 时基计数器值`xTickCount` + 任务延时`xTickToDelay`
+  - 每次时基中断来, `比较xTickCount` `xNextTaskUnblockTime`
+
+# 支持时间片
+- 同一优先级下多个任务, 每个任务轮流享有相同CPU时间
+
+# 移植
+- 配置`FreeRTOSConfig.h`
+  ```C++
+  #include "stm32f10x.h"  //  
+  #include "bsp_usart.h"  //  断言操作需要打印
+
+  #define xPortPendSVHandler PendSV_Handler // 中断服务函数配置相关
+  #define vPortSVCHandler SVC_Handler
+  ```
+- 配置`stm32f10x_it.c`
+  ```C++
+  //systick 中断服务函数 
+  void SysTick_Handler(void) 
+  { 
+  #if (INCLUDE_xTaskGetSchedulerState == 1 ) 
+      if (xTaskGetSchedulerState() != taskSCHEDULER_NOT_STARTED) {
+  #endif /* INCLUDE_xTaskGetSchedulerState */ 
+          xPortSysTickHandler();
+  #if (INCLUDE_xTaskGetSchedulerState == 1 ) 
+      }
+  #endif /* INCLUDE_xTaskGetSchedulerState */
+  }
+  ```
+
+# 创建任务
+1. 板级初始化
+1. 定义任务函数
+1. 实现空闲任务, 定时器任务堆栈函数
+2. 定义任务栈
+3. 定义任务控制块
+4. 创建静态任务
+5. 启动任务
+
+# 任务管理
+- 任务: 竞争系统资源的最小运行单元
+  - FreeRTOS的任务可认为是一系列独立任务集合, 每个任务在自己环境中运行, 同一时刻一个任务运行(调度器决定启动停止, 切入切出保存上下文环境), 宏观上每个任务都在执行, 系统可用SRAM决定能运行多少任务
+  - 抢占式调度机制: 高优先级任务可打断低优先级任务, 低优先级任务必须在高优先级任务阻塞/结束才能得到调度
+- 任务调度器: 基于优先级的全抢占式调度
+  - 中断处理函数, 调度器上锁部分, 禁止中断 不可抢占, 其他部分可抢占
+  - 同优先级采用时间片轮转方式调度, 最大可能保证高优先级任务得以运行
+- 任务状态迁移
+  - ![在这里插入图片描述](https://img-blog.csdnimg.cn/4dec8b416fb8486eacb3b8e91b2ad558.png)
+  - 就绪态: 任务准备就绪, 等调度器进行调度, 有更高优先级任务创建/恢复, 原运行任务->就绪态
+  - 运行态: 任务切换时, 就绪列表的最高优先级任务被执行, 选择运行的永远是最高优先级的就绪态任务
+  - 阻塞态: 运行任务发生阻塞(被挂起,延时,等待信号量), 任务退出就绪列表, 切换任务
+  - 挂起态: 通过`vTaskSuspend()`将处于任何状态的任务挂起, 挂起后无cpu使用权, 不参与调度, 用`vTaskResume()`解除
+    - `vTaskSuspend()`任务挂起函数
+    - `vTaskResume()`任务恢复函数
+    - `xTaskResumeFromISR()`恢复被挂起的任务(中断)
+    - `vTaskSuspendAll()`挂起调度器, 相当于挂起所有任务
+    - `xTaskResumeAll()`恢复调度器, 用多少次挂起要用多少次恢复
+- 函数
+  - `vTaskDelete()`任务删除函数
+  - `vTaskDelay()`相对任务延时函数, 不适用于周期性执行任务的场合
+  - `vTaskDelayUntil()`绝对延时函数, 实现固定频率定期执行任务
+
+# 消息队列
+- 消息队列: 常用于任务间通信的数据结构
+  - 可在任务与任务间中断和任务间传递信息, 实现任务接受来自其他任务/中断的不定长消息
+  - 

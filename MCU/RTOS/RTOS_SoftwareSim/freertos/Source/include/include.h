@@ -1,8 +1,0 @@
-#include "FreeRTOS.h"
-#include "FreeRTOSConfig.h"
-#include "list.h"
-#include "portmacro.h"
-#include "projdefs.h"
-#include "rtdef.h"
-#include "task.h"
-#include "port.h"
