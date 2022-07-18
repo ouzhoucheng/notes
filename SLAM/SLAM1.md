@@ -76,3 +76,8 @@
   - 齐次坐标的转换 $c=Ta$
   - 特殊欧氏群 $\operatorname{SE}(3)=\left\{\boldsymbol{T}=\left[\begin{array}{ll}\boldsymbol{R} & \boldsymbol{t} \\\mathbf{0}^{\mathrm{T}} & 1\end{array}\right] \in \mathbb{R}^{4 \times 4} \mid \boldsymbol{R} \in \mathrm{SO}(3), \boldsymbol{t} \in \mathbb{R}^{3}\right\}$
   - $\boldsymbol{T}^{-1}=\left[\begin{array}{cc}\boldsymbol{R}^{\mathrm{T}} & -\boldsymbol{R}^{\mathrm{T}}\boldsymbol{t} \\\mathbf{0}^{\mathrm{T}} & 1\end{array}\right]$
+
+# 旋转向量和欧拉角
+- 旋转向量: 方向=旋转轴, 长度=旋转角度 一个三维向量即可描述旋转
+- 一次变换: 1旋转向量+1平移向量 六维
+- 旋转向量->旋转矩阵: $\textbf{R}=\cos\theta\textbf{I}+(1-\cos\theta)\textbf{nn}^T+\sin\theta n\^{}$  单位长度向量n
