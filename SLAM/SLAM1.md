@@ -88,4 +88,22 @@
 # 四元数
 - 四元数 $\textbf{q}=q_0+q_q\textbf{i}+q_2\textbf{j}+q_3\textbf{k}$$~~~~~$ $\textbf{q}=[s,v]^T$
   - 虚部=0:实四元数 实部=0:虚四元数
-- 加法 $\textbf{q}_a\pm \textbf{q}_b=[s_a\pm s_b,\textbf{v}_a\pm \textbf{v}_b]^T$
+- 运算
+  - 加法 $\textbf{q}_a\pm \textbf{q}_b=[s_a\pm s_b,\textbf{v}_a\pm \textbf{v}_b]^T$
+  - 乘法 $\begin{aligned}\boldsymbol{q}_{a} \boldsymbol{q}_{b}=& s_{a} s_{b}-x_{a} x_{b}-y_{a} y_{b}-z_{a} z_{b} \\&+\left(s_{a} x_{b}+x_{a} s_{b}+y_{a} z_{b}-z_{a} y_{b}\right) \mathrm{i} \\&+\left(s_{a} y_{b}-x_{a} z_{b}+y_{a} s_{b}+z_{a} x_{b}\right) \mathrm{j} \\&+\left(s_{a} z_{b}+x_{a} y_{b}-y_{a} x_{b}+z_{a} s_{b}\right) \mathrm{k}\end{aligned}$
+    - $\boldsymbol{q}_{a} \boldsymbol{q}_{b}=\left[s_{a} s_{b}-\boldsymbol{v}_{a}^{\mathrm{T}} \boldsymbol{v}_{b}, s_{a} \boldsymbol{v}_{b}+s_{b} \boldsymbol{v}_{a}+\boldsymbol{v}_{a} \times \boldsymbol{v}_{b}\right]^{\mathrm{T}}$
+  - 模长 $\left\|\boldsymbol{q}_{a}\right\|=\sqrt{s_{a}^{2}+x_{a}^{2}+y_{a}^{2}+z_{a}^{2}}$
+    - $\left\|\boldsymbol{q}_{a} \boldsymbol{q}_{b}\right\|=\left\|\boldsymbol{q}_{a}\right\|\left\|\boldsymbol{q}_{b}\right\|$ 四元数乘积模=模乘积
+  - 共轭 $\boldsymbol{q}_{a}^{*}=s_{a}-x_{a} \mathrm{i}-\mathrm{y}_{\mathrm{a}} \mathrm{j}-\mathrm{z}_{\mathrm{a}} \mathrm{k}=\left[\mathrm{s}_{\mathrm{a}},-\mathrm{v}_{\mathrm{a}}\right]^{\mathrm{T}}$
+    - 共轭x本身=实四元数 $\boldsymbol{q}^{*} \boldsymbol{q}=\boldsymbol{q} \boldsymbol{q}^{*}=\left[s_{a}^{2}+\boldsymbol{v}^{\mathrm{T}} \boldsymbol{v}, \boldsymbol{0}\right]^{\mathrm{T}}$
+  - 逆 $\boldsymbol{q}^{-1}=\boldsymbol{q}^{*} /\|\boldsymbol{q}\|^{2}$
+    - 四元数x其逆=1 $q q^{-1}=q^{-1} q=1$
+    - 单位四元数: 逆=共轭
+    - $\left(\boldsymbol{q}_{a} \boldsymbol{q}_{b}\right)^{-1}=\boldsymbol{q}_{b}^{-1} \boldsymbol{q}_{a}^{-1}$
+  - 数乘 $k\textbf{q} = [ks, kv]^T$
+- 旋转 三维空间点$p=[0,x,y,z]^T=[0,v]^T$
+  - $\textbf{p}'=\textbf{qpq}^{-1}$ 
+    - p'纯虚四元数,虚部即坐标
+- 四元数->旋转矩阵: $R=vv^T+s^2I+2sv\^{}+(v\^{})^2$
+  - $\theta = 2\arccos q_0$
+  - $[n_x,n_y,x_z]T=[q_1,q_2,q_3]^T/\sin\frac{\theta}{2}$
