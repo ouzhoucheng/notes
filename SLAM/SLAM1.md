@@ -84,3 +84,8 @@
 - 旋转矩阵->旋转向量: $\textbf{Rn}=\textbf{n}$
 - 欧拉角(yaw-pitch-roll ZYX转角)
 - 万向锁: ZYX转角定义下, pitch=90°时, 第三次旋转与第一次旋转相同, 丢失了一个自由度(逻辑旋转顺序和实际旋转顺序不一样)
+
+# 四元数
+- 四元数 $\textbf{q}=q_0+q_q\textbf{i}+q_2\textbf{j}+q_3\textbf{k}$$~~~~~$ $\textbf{q}=[s,v]^T$
+  - 虚部=0:实四元数 实部=0:虚四元数
+- 加法 $\textbf{q}_a\pm \textbf{q}_b=[s_a\pm s_b,\textbf{v}_a\pm \textbf{v}_b]^T$
