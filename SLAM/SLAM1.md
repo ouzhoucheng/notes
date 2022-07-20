@@ -77,7 +77,7 @@
   - 特殊欧氏群 $\operatorname{SE}(3)=\left\{\boldsymbol{T}=\left[\begin{array}{ll}\boldsymbol{R} & \boldsymbol{t} \\\mathbf{0}^{\mathrm{T}} & 1\end{array}\right] \in \mathbb{R}^{4 \times 4} \mid \boldsymbol{R} \in \mathrm{SO}(3), \boldsymbol{t} \in \mathbb{R}^{3}\right\}$
   - $\boldsymbol{T}^{-1}=\left[\begin{array}{cc}\boldsymbol{R}^{\mathrm{T}} & -\boldsymbol{R}^{\mathrm{T}}\boldsymbol{t} \\\mathbf{0}^{\mathrm{T}} & 1\end{array}\right]$
 
-# 旋转向量和欧拉角
+## 3.2旋转向量和欧拉角
 - 旋转向量: 方向=旋转轴, 长度=旋转角度 一个三维向量即可描述旋转
 - 一次变换: 1旋转向量+1平移向量 六维
 - 旋转向量->旋转矩阵: $\textbf{R}=\cos\theta\textbf{I}+(1-\cos\theta)\textbf{nn}^T+\sin\theta n\^{}$  单位长度向量n
@@ -85,7 +85,7 @@
 - 欧拉角(yaw-pitch-roll ZYX转角)
 - 万向锁: ZYX转角定义下, pitch=90°时, 第三次旋转与第一次旋转相同, 丢失了一个自由度(逻辑旋转顺序和实际旋转顺序不一样)
 
-# 四元数
+## 3.3四元数
 - 四元数 $\textbf{q}=q_0+q_q\textbf{i}+q_2\textbf{j}+q_3\textbf{k}$$~~~~~$ $\textbf{q}=[s,v]^T$
   - 虚部=0:实四元数 实部=0:虚四元数
 - 运算
@@ -107,3 +107,30 @@
 - 四元数->旋转矩阵: $R=vv^T+s^2I+2sv\^{}+(v\^{})^2$
   - $\theta = 2\arccos q_0$
   - $[n_x,n_y,x_z]T=[q_1,q_2,q_3]^T/\sin\frac{\theta}{2}$
+
+## 3.4变换
+- 相似变换: 比欧式变换多一个自由度, 允许物体均匀缩放
+  - $\boldsymbol{T}_{S}=\left[\begin{array}{ll}s \boldsymbol{R} & \boldsymbol{t} \\\mathbf{0}^{\mathrm{T}} & 1\end{array}\right]$
+  - 相似变换群: 相似变换的集合 Sim(3)
+- 仿射变换: 正交投影, A为可逆矩阵, 立方体不再为方, 各面仍为平行四边形
+  - $\boldsymbol{T}_{A}=\left[\begin{array}{ll}\boldsymbol{A} & \boldsymbol{t} \\\mathbf{0}^{\mathrm{T}} & 1\end{array}\right]$
+- 射影变换: 真实世界->相机照片, 2D 8自由度, 3D 15自由度
+- ![在这里插入图片描述](https://img-blog.csdnimg.cn/9cd50cbec8544ad58ac149d5fbaa960d.png)
+
+# 4.李群&李代数
+## 4.1.基础
+- 旋转矩阵++=特殊正交群$SO(3)$ $\operatorname{SO}(3)=\left\{\boldsymbol{R} \in \mathbb{R}^{3 \times 3} \mid \boldsymbol{R} \boldsymbol{R}^{\mathrm{T}}=\boldsymbol{I}, \operatorname{det}(\boldsymbol{R})=1\right\}$
+- 变换矩阵++=特殊欧式群$SE(3)$ $\mathrm{SE}(3)=\left\{\boldsymbol{T}=\left[\begin{array}{cc}\boldsymbol{R} & \boldsymbol{t} \\\mathbf{0}^{\mathrm{T}} & 1\end{array}\right] \in \mathbb{R}^{4 \times 4} \mid \boldsymbol{R} \in \mathrm{SO}(3), \boldsymbol{t} \in \mathbb{R}^{3}\right\}$
+- 对加法不封闭,对乘法封闭$\boldsymbol{R}_{1}+\boldsymbol{R}_{2} \notin \mathrm{SO}(3), \quad \boldsymbol{T}_{1}+\boldsymbol{T}_{2} \notin \mathrm{SE}(3)$ $~~~~$ $\boldsymbol{R}_{1} \boldsymbol{R}_{2} \in \mathrm{SO}(3), \quad \boldsymbol{T}_{1} \boldsymbol{T}_{2} \in \mathrm{SE}(3)$
+- 群: 一种集合+一种运算的代数结构  集合A 运算· 群G=(A,·)
+  - 封闭性 $\forall a_{1}, a_{2} \in A, \quad a_{1} \cdot a_{2} \in A$
+  - 结合律 $\forall a_{1}, a_{2}, a_{3} \in A, \quad\left(a_{1} \cdot a_{2}\right) \cdot a_{3}=a_{1} \cdot\left(a_{2} \cdot a_{3}\right)$
+  - 幺元 $\exists a_{0} \in A, \quad \text { s.t. } \quad \forall a \in A, \quad a_{0} \cdot a=a \cdot a_{0}=a$
+  - 逆 $\forall a \in A, \quad \exists a^{-1} \in A, \quad \text { s.t. } \quad a \cdot a^{-1}=a_{0}$
+  - 常见
+    - 整数加法$(Z,+)$$~~~~$ 不含0有理数乘法$(Q\setminus 0,·)$
+    - 一般线性群GL(n) nxn可逆矩阵, 对矩阵乘法成群
+    - 特殊正交群SO(n) 旋转矩阵群 SO(2) SO(3)
+    - 特殊欧氏群SE(n) 欧氏变换 SE(2) SE(3)
+  - 李群: 连续(光滑)性质的群 SO(n) SE(n) 能连续运动
+- 李代数
