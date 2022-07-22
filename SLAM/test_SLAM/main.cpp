@@ -32,6 +32,7 @@ int main(int argc, char **argv)
     // cout << "matrix xxx 12345: \n" << matrix_dynamic << endl;
 
     // operation
+    // visit the elements
     cout<<"matrix 2x3 1->6"<<endl;
     for (int i = 0; i < 2; i++)
     {
@@ -41,5 +42,36 @@ int main(int argc, char **argv)
         }
         cout<<endl;
     }
+    // times
+    v_3d << 3,2,1;
+    vd_3d << 4,5,6;
+    Matrix<double, 2, 1>result = matrix_23.cast<double>() * v_3d;
+    cout << "[1,2,3;4,5,6]*[3;2,1]=" << result << endl;
     
+    // calculation
+    matrix_33 = Matrix3d::Random();
+    cout << "random matrix: \n" << matrix_33 << endl;
+    cout << "transpose: \n" << matrix_33.transpose() << endl;
+    cout << "sum: \n" << matrix_33.sum() << endl;
+    cout << "trace: \n" << matrix_33.trace() << endl;
+    cout << "times 10: \n" << 10 * matrix_33 << endl;
+    cout << "inverse: \n" << matrix_33.inverse() << endl;
+    cout << "det: \n" << matrix_33.determinant() << endl;
+    // eigen
+    SelfAdjointEigenSolver<Matrix3d> eigen_solver(matrix_33.transpose() * matrix_33);
+    cout << "Eigen values: \n" << eigen_solver.eigenvalues() << endl;
+    cout << "Eigen vectors: \n" << eigen_solver.eigenvectors() << endl;
+    // solve formula
+    Matrix<double, MATRIX_SIZE, MATRIX_SIZE> matrix_NN = MatrixXd::Random(MATRIX_SIZE, MATRIX_SIZE);
+    matrix_NN = matrix_NN * matrix_NN.transpose();
+    Matrix<double, MATRIX_SIZE, 1>v_Nd = MatrixXd::Random(MATRIX_SIZE, 1);
+    // direct inverse
+    Matrix<double, MATRIX_SIZE, 1> x = matrix_NN.inverse() * v_Nd;
+    cout << "x = " << x.transpose() << endl;
+    // QR decomposition
+    x = matrix_NN.colPivHouseholderQr().solve(v_Nd);
+    cout << "x = " << x.transpose() << endl;
+    // cholesky decomposition
+    x = matrix_NN.ldlt().solve(v_Nd);
+    cout << "x = " << x.transpose() << endl;
 }
